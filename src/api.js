@@ -10,7 +10,7 @@ var T = new Twitter(config);  // retreive keys
 
 // add parameters, change as needed
 var params = {
-  q: '#hello, world',  //search for hello world
+  q: '#depaul',  //search for hello world
   count: 10,  //return 10 tweets
   result_type: 'recent', //return the most recent tweets
   lang: 'en'  // return english only
