@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import './config.js';
 import {
   BrowserRouter as Router,
   Route,
@@ -16,7 +15,6 @@ import {
 //  access_token_secret: 'llO5nWx7QdO2XlUyeBUe6KPZeL5y9MqlZqTu5sRXvNZbZ'
 //}
 	
-
 var Twitter = require('twitter');
 var config = require('./config.js');
 
