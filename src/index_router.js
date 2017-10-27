@@ -20,7 +20,12 @@ import {
 var Twitter = require('twitter');
 var config = require('./config.js');
 
-var T = new Twitter(config);  // retreive keys
+var T = new Twitter({
+	consumer_key: 'RuJpmlRpXja21rVk7LlA0qZ9f',
+	consumer_secret: 'vKz3e4VWAyiWfASi9aeENLXhH3jyuveff5Sev8eNFRr6hUlPef',
+	access_token_key: '2853794314-kKoq6f5t9E2kLRzFWwcrUB68dLwnelPPoM4NC0q',
+	access_token_secret: 'llO5nWx7QdO2XlUyeBUe6KPZeL5y9MqlZqTu5sRXvNZbZ'});  
+	// retreive keys
 
 // add parameters, change as needed
 var params = {
