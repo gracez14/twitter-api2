@@ -1,66 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
-	
-	
-//config.exports = {
-//  consumer_key: 'RuJpmlRpXja21rVk7LlA0qZ9f',
-//  consumer_secret: 'vKz3e4VWAyiWfASi9aeENLXhH3jyuveff5Sev8eNFRr6hUlPef',
-//  access_token_key: '2853794314-kKoq6f5t9E2kLRzFWwcrUB68dLwnelPPoM4NC0q',
-//  access_token_secret: 'llO5nWx7QdO2XlUyeBUe6KPZeL5y9MqlZqTu5sRXvNZbZ'
-//}
-	
-var Twitter = require('twitter');
-var config = require('./config.js');
+import './api.js';   //the api page
 
-var T = new Twitter({
-	consumer_key: 'RuJpmlRpXja21rVk7LlA0qZ9f',
-	consumer_secret: 'vKz3e4VWAyiWfASi9aeENLXhH3jyuveff5Sev8eNFRr6hUlPef',
-	access_token_key: '2853794314-kKoq6f5t9E2kLRzFWwcrUB68dLwnelPPoM4NC0q',
-	access_token_secret: 'llO5nWx7QdO2XlUyeBUe6KPZeL5y9MqlZqTu5sRXvNZbZ'});  
-	// retreive keys
 
-// add parameters, change as needed
-var params = {
-  q: '#depaul',  //search for hello world
-  count: 10,  //return 10 tweets
-  result_type: 'recent', //return the most recent tweets
-  lang: 'en'  // return english only
-}
-
-//GET from twitter API
-var tweetsResult = T.get('search/tweets', params, function(err, tweets, response) {
-    console.log(tweets);
+class Menu extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      squares: Array(4).fill(null),
+    };
   }
-);
-	
-const routes = [
-  { path: '/twapi',
-    exact: true,
-    sidebar: () => <div></div>,
-    main: () => <div>{tweetsResult}</div>
-  },
 
-]
-const Sidebar = () => (
-  <Router>
-    <div style={{ display: 'flex' }}>
-      <div style={{
-        padding: '10px',
-        width: '40%',
-        background: '#f0f0f0'
-      }}>
-	  
-
+  render() {
+    const status = 'Twitter API Menu';
+          
+    return (
+      <div>
+        <div className="status">{status}</div>
         <div id="menu">
           <ul id = "nav">
             <li><a href="#" target="_self">Sources</a>
-              <ul><li><Link to="./twapi">Twitter Search</Link></li></ul></li>
+              <ul><li><a href="./api.js">Twitter Search</a></li></ul></li>
             <li><a href="#" target="_self">Pipeline</a></li>
             <li><a href="#" target="_self">Datasets</a></li>
             <li><a href="#" target="_self">Dashboards</a></li>
@@ -68,19 +29,15 @@ const Sidebar = () => (
            </ul>
              </div>
       </div>
+    );
+  }
+}
 
-      <div style={{ flex: 1, padding: '10px' }}>
-        {routes.map((route, index) => (
-          <Route
-            key={index}
-            path={route.path}
-            exact={route.exact}
-            component={route.main}
-          />
-        ))}
-      </div>
-    </div>
-  </Router>
-)
 
-export default Sidebar
+// ========================================
+
+ReactDOM.render(
+  <Menu />,
+  document.getElementById('root')
+);
+
