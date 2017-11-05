@@ -1,8 +1,13 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import './api.js';   //the api page
-
+import './api.js';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 
 class Menu extends React.Component {
   constructor() {
@@ -34,10 +39,10 @@ class Menu extends React.Component {
 }
 
 
+
 // ========================================
 
 ReactDOM.render(
   <Menu />,
   document.getElementById('root')
 );
-

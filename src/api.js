@@ -27,6 +27,7 @@ var tweetsResult = T.get('search/tweets', params, function(err, tweets, response
 class API extends React.Component {
   render() {
 	  const status = "Search recent tweets";   //title 
+	  
 	  return (
 		<div><ul><li>{status}</li>  
 		<li>{tweetsResult}</li></ul></div>  //return the GET result 
@@ -34,10 +35,5 @@ class API extends React.Component {
     );
   }
 }
+export default API
 
-
-// show the page
-ReactDOM.render(
-  <API />,
-  document.getElementById('root')
-);
