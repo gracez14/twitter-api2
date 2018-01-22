@@ -1,0 +1,101 @@
+body {
+  margin: 100;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #eee;
+}
+
+
+.main-form {
+  background-color: none;
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px 0 10px 0;
+}
+
+.main-form input {
+  margin-top: 0px;
+}
+
+
+/* shadow, break, and dash
+   help create a tiled feel */
+.shadow {
+  height: 5px;
+  width: 70%;
+  background-color: none;
+  margin: 0 auto;
+}
+
+.break {
+  height: 30px;
+  width: 70%;
+  background-color: #eee;
+  margin: 0 auto;
+}
+
+.dash {
+  height: 0;
+  width: 100%;
+  border: 2px dashed #eee;
+}
+
+
+.results-container {
+  margin-bottom: 100px;
+}
+
+.results {
+  background-color: white;
+  padding: 10px 0 10px 0;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.results h1 {
+  margin: 10px 0 30px 0;
+}
+
+.result {
+  padding: 5px 20px 0 20px;
+}
+
+
+.bottom {
+  margin: 40px 0 10px 0;
+  font-size: small;
+  font-style: italic;
+}
+
+
+/* default create-react-app styles */
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: none;
+  height: 10px;
+  padding: 20px;
+  color: purple;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
