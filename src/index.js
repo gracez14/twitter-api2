@@ -32,11 +32,11 @@ class Menu extends React.Component {
     return (
         <div id="menu">
           <ul id = "nav">
-            <li><a href="#" target="_self">Sources</a>
+            <li><a href="http://localhost:3000/" target="_self">Sources</a>
               <ul><li><Link to="/api">Twitter Search</Link></li></ul></li>
-            <li><a href="#" target="_self">Pipeline</a></li>
-            <li><a href="#" target="_self">Datasets</a></li>
-            <li><a href="#" target="_self">Dashboards</a></li>
+            <li><a href="http://localhost:3000/" target="_self">Pipeline</a></li>
+            <li><a href="http://localhost:3000/" target="_self">Datasets</a></li>
+            <li><a href="http://localhost:3000/" target="_self">Dashboards</a></li>
           </ul>
         </div>
     );
